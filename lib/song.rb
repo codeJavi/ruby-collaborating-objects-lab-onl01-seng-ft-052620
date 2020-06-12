@@ -4,7 +4,7 @@ class Song
 
   def initialize(name)
     @name = name
-    @song = 
+    @song = song.new 
   end
   
   def save
