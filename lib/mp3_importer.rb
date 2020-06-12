@@ -6,10 +6,16 @@ class MP3Importer
   end
 
   def files
-    Dir[@path+"/*.mp3"].map { |file| file.split("/").last }
+    files = []
+    Dir.new(self.path).each do |file|
+      files << file if file.length > 4
+    end
+    files
   end
 
   def import
-    files.each { |file| Song.new_by_filename(file) }
+    self.files.each do |filename|
+      Song.new_by_filename(filename)
+    end
   end
-end 
+end
