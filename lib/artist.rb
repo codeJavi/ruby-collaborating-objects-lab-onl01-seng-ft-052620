@@ -1,18 +1,18 @@
-class Artist 
-  attr_accessor :name, :has_and_belongs_to_many
-  
+class Artist
+  attr_accessor :name, :songs
+
   @@all = []
-  
-  def initalize(name)
+
+  def initialize(name)
     @name = name
     @songs = []
     save
-  end 
-  
+  end
+
   def self.all
     @@all
-  end 
-  
+  end
+
   def self.create(name)
     artist = self.new(name)
     artist.name = name
