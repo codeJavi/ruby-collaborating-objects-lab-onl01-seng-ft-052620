@@ -21,5 +21,14 @@ class Song
     self.artist = artist
     artist.add_song(self)
     
+    def self.all
+      @@all
+    end 
+    
+    def save 
+      @all<<self 
+      @self 
+    end 
+    
   end
 end 
