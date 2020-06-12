@@ -27,9 +27,3 @@ class Song
   def save
     @@all << self
   end
-
-  def songs
-    @songs
-  end
-
-end
